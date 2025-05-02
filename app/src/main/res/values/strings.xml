@@ -6,4 +6,9 @@
     <string name="edit_email">Insert your email here</string>
     <string name="edit_password">Insert your password here</string>
     <string name="recuperar">I forgot my password</string>
+    <string name="profile">Profile</string>
+    <string name="nome_user">Name of User</string>
+    <string name="num_viagens">Total of trips:</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
 </resources>

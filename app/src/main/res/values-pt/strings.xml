@@ -7,4 +7,9 @@
     <string name="edit_email">Insira o seu email</string>
     <string name="edit_password">Insira a sua password</string>
     <string name="recuperar">Esqueci a password</string>
+    <string name="profile">Perfil</string>
+    <string name="nome_user">Nome do utilizador</string>
+    <string name="num_viagens">Total de viagens:</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="logout">Terminar Sessão</string>
 </resources>

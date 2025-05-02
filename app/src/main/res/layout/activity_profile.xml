@@ -87,7 +87,7 @@
         android:layout_marginTop="25dp"
         android:textSize="23sp"
         android:layout_centerHorizontal="true"
-        android:translationZ="1dp"/>
+        android:translationZ="1dp" />
 
     <ImageView
         android:id="@+id/cutted_roteiros"

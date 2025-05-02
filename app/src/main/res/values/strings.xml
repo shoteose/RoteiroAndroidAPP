@@ -6,6 +6,12 @@
     <string name="edit_email">Insert your email here</string>
     <string name="edit_password">Insert your password here</string>
     <string name="recuperar">I forgot my password</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="proximo1">Next</string>
+    <string name="proximo2">Go to login</string>
+    <string name="introSlider1Titulo">Welcome to Roteiros 1</string>
+    <string name="introSlider1Descricao">Welcome to Roteiros Descricao 1</string>
+    <string name="introSlider2Titulo">Welcome to Roteiros 2</string>
+    <string name="introSlider2Descricao">Welcome to Roteiros Descricao 2</string>
+    <string name="introSlider3Titulo">Welcome to Roteiros 3</string>
+    <string name="introSlider3Descricao">Welcome to Roteiros Descricao 3</string>
 </resources>

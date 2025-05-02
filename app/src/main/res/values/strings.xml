@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">RoteiroAndroidApp</string>
-    <string name="login">Iniciar Sessão</string>
+    <string name="login">Login</string>
     <string name="slogan">More than an app, a digital passport</string>
     <string name="signup">Sign Up</string>
+    <string name="edit_email">Insert your email here</string>
+    <string name="edit_password">Insert your password here</string>
+    <string name="recuperar">I forgot my password</string>
 </resources>

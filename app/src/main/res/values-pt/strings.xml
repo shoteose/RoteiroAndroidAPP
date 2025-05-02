@@ -4,4 +4,7 @@
     <string name="login">Iniciar Sessão</string>
     <string name="slogan">Mais que uma app, um passaporte digital</string>
     <string name="signup">Criar Conta</string>
+    <string name="edit_email">Insira o seu email</string>
+    <string name="edit_password">Insira a sua password</string>
+    <string name="recuperar">Esqueci a password</string>
 </resources>

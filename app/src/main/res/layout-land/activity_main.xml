@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:backgroundTint="@color/white">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="245dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="false"
+        android:paddingLeft="85dp"
+        android:paddingTop="50dp"
+        android:src="@drawable/logo_roteiros"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/roteiros_title"
+        android:layout_width="380dp"
+        android:layout_height="108dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="false"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingLeft="30dp"
+        android:text="Roteiros"
+        android:textColor="#098336"
+        android:textSize="60sp" />
+
+    <TextView
+        android:id="@+id/roteiros_slogan"
+        android:layout_width="396dp"
+        android:layout_height="113dp"
+        android:layout_below="@id/roteiros_title"
+        android:layout_marginTop="-38dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingTop="50dp"
+        android:text="@string/slogan"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/roteiros_slogan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-211dp"
+        android:backgroundTint="#098336"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/login"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_criar"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/btn_login"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#E8EDF2"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/signup"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/aviao_com_rastro"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/aviao_com_rastro"
+        android:translationX="55dp"
+        />
+
+
+</RelativeLayout>

@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoteiroAndroidApp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Login"
+            android:exported="false" />
         <activity
             android:name=".IntroActivity"
             android:exported="true">
@@ -22,8 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity" android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

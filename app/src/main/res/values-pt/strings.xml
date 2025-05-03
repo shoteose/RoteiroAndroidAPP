@@ -29,4 +29,10 @@
     <string name="date_viagem">Dias da viagem</string>
     <string name="rating">Classificação da viagem</string>
     <string name="edit_local">Editar Locais</string>
+    <string name="rating_location">Classificação do Local</string>
+    <string name="visited_location">Dia do local visitado</string>
+    <string name="type_local">Tipo de Local</string>
+    <string name="description_local">Descrição do local</string>
+    <string name="price_local">Preço(s)</string>
+    <string name="location_local">Localização</string>
 </resources>

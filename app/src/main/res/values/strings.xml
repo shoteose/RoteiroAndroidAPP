@@ -30,4 +30,10 @@
     <string name="date_viagem">Travel days</string>
     <string name="rating">Trip Rating</string>
     <string name="edit_local">Edit Locations</string>
+    <string name="rating_location">Rating of location</string>
+    <string name="visited_location">Day of the place visited</string>
+    <string name="type_local">Location Type</string>
+    <string name="description_local">Location Description</string>
+    <string name="price_local">Price(s)</string>
+    <string name="location_local">Location</string>
 </resources>

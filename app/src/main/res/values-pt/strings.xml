@@ -21,4 +21,6 @@
     <string name="num_viagens">Total de viagens:</string>
     <string name="edit_profile">Editar Perfil</string>
     <string name="logout">Terminar Sessão</string>
+    <string name="confirm">Confirmar Password</string>
+    <string name="trips">Viagens</string>
 </resources>

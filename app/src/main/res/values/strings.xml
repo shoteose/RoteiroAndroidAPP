@@ -24,4 +24,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="confirm">Confirm Password</string>
     <string name="trips">Trips</string>
+    <string name="title_viagem">Title of the trip</string>
+    <string name="destination_viagem">Trip destination</string>
+    <string name="description_viagem">Trip description</string>
+    <string name="date_viagem">Travel days</string>
+    <string name="rating">Trip Rating</string>
+    <string name="edit_local">Edit Locations</string>
 </resources>

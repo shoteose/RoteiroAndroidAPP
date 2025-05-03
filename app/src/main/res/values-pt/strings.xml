@@ -23,4 +23,10 @@
     <string name="logout">Terminar Sessão</string>
     <string name="confirm">Confirmar Password</string>
     <string name="trips">Viagens</string>
+    <string name="title_viagem">Título da viagem</string>
+    <string name="destination_viagem">Destino da viagem</string>
+    <string name="description_viagem">Descrição da viagem</string>
+    <string name="date_viagem">Dias da viagem</string>
+    <string name="rating">Classificação da viagem</string>
+    <string name="edit_local">Editar Locais</string>
 </resources>

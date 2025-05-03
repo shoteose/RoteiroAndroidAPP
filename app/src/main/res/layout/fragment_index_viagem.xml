@@ -174,9 +174,6 @@
 
     </LinearLayout>
 
-
-
-
     <ImageView
         android:id="@+id/cutted_roteiros"
         android:layout_width="wrap_content"

@@ -90,7 +90,7 @@ class IntroActivity : AppCompatActivity() {
         }
     }
 
-    // ... update dos indicators dependendo da pos dependendo se é o ativo ou não
+    //  update dos indicators dependendo da pos dependendo se é o ativo ou não
     private fun updateIndicators(position: Int) {
         for (i in 0 until indicatorsContainer.childCount) {
             val imageView = indicatorsContainer.getChildAt(i) as ImageView

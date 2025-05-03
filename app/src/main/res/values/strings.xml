@@ -15,6 +15,7 @@
     <string name="introSlider2Descricao">Welcome to Roteiros Descricao 2</string>
     <string name="introSlider3Titulo">Welcome to Roteiros 3</string>
     <string name="introSlider3Descricao">Welcome to Roteiros Descricao 3</string>
+    <string name="editarLocal">Edit Locals</string>
     <string name="profile">Profile</string>
     <string name="nome_user">Name of User</string>
     <string name="num_viagens">Total of trips:</string>
@@ -36,4 +37,5 @@
     <string name="description_local">Location Description</string>
     <string name="price_local">Price(s)</string>
     <string name="location_local">Location</string>
+    <string name="adicionarLocal">Add Local</string>
 </resources>

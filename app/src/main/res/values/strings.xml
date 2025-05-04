@@ -38,4 +38,6 @@
     <string name="price_local">Price(s)</string>
     <string name="location_local">Location</string>
     <string name="adicionarLocal">Add Local</string>
+    <string name="name_local">Name of the location</string>
+    <string name="edit_name">Edit Location</string>
 </resources>

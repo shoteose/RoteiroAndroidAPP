@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".AddLocalFragment">
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="none"
+        android:scaleType="centerInside"
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingTop="30dp"
+        android:text="@string/adicionarLocal"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="12dp"
+        android:elevation="4dp"
+        app:cardCornerRadius="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_local">
+
+        <ImageView
+            android:id="@+id/edit_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fotoblank" />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/data_classificacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardview">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_medium"
+                    android:letterSpacing="0.2"
+                    android:shadowColor="#2C2D2D"
+                    android:shadowDx="2"
+                    android:shadowDy="15"
+                    android:shadowRadius="15"
+                    android:text="@string/visited_location"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/data_range"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:text="--/--/--"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+                />
+
+                <ImageView
+                    android:id="@+id/test_calendar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="6dp"
+                    android:src="@drawable/ic_calendar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:background="#000000" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/rating_location"
+                android:textAllCaps="true"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star_empty" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_star_empty" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/edit_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="150dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/data_classificacao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/type_local"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:text=""
+                android:hint="@string/type_local"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/name_local"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:layout_marginEnd="15dp"
+
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:text=""
+                android:hint="@string/name_local"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/description_local"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:text=""
+                android:hint="@string/description_local"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/price_local"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:layout_marginEnd="15dp"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:text=""
+                android:hint="@string/price_local"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/location_local"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:layout_marginEnd="15dp"
+
+                android:paddingStart="10dp"
+                android:fontFamily="@font/poppins"
+                android:textSize="16sp"
+                android:text=""
+                android:hint="@string/location_local"
+                tools:layout_editor_absoluteX="95dp"
+                tools:layout_editor_absoluteY="209dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/edit_profile"
+        android:layout_width="220dp"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/border_green"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/guardar"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        android:translationZ="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_scroll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/cutted_roteiros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.2"
+        android:src="@drawable/cutted_roteiros"
+        android:translationY="403dp"
+        android:translationZ="-1dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

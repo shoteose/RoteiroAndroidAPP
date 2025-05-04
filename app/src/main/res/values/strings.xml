@@ -40,4 +40,5 @@
     <string name="adicionarLocal">Add Local</string>
     <string name="name_local">Name of the location</string>
     <string name="edit_name">Edit Location</string>
+    <string name="create_trip">Create Trip</string>
 </resources>

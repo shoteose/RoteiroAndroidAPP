@@ -40,4 +40,5 @@
     <string name="adicionarLocal">Adicionar Local</string>
     <string name="name_local">Nome do local</string>
     <string name="edit_name">Editar Local</string>
+    <string name="create_trip">Criar Viagem</string>
 </resources>

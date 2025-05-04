@@ -8,7 +8,9 @@
     <string name="edit_password">Insira a sua password</string>
     <string name="recuperar">Esqueci a password</string>
     <string name="proximo1">Próximo</string>
+    <string name="guardar">Guardar</string>
     <string name="proximo2">Ir para Login</string>
+    <string name="editarLocal">Editar Locais</string>
     <string name="introSlider1Titulo">Welcome to Roteiros 1</string>
     <string name="introSlider1Descricao">Welcome to Roteiros Descricao 1</string>
     <string name="introSlider2Titulo">Welcome to Roteiros 2</string>
@@ -20,4 +22,23 @@
     <string name="num_viagens">Total de viagens:</string>
     <string name="edit_profile">Editar Perfil</string>
     <string name="logout">Terminar Sessão</string>
+    <string name="hello_blank_fragment">Olá corno</string>
+    <string name="confirm">Confirmar Password</string>
+    <string name="trips">Viagens</string>
+    <string name="title_viagem">Título da viagem</string>
+    <string name="destination_viagem">Destino da viagem</string>
+    <string name="description_viagem">Descrição da viagem</string>
+    <string name="date_viagem">Dias da viagem</string>
+    <string name="rating">Classificação da viagem</string>
+    <string name="edit_local">Editar Locais</string>
+    <string name="rating_location">Classificação do Local</string>
+    <string name="visited_location">Dia do local visitado</string>
+    <string name="type_local">Tipo de Local</string>
+    <string name="description_local">Descrição do local</string>
+    <string name="price_local">Preço(s)</string>
+    <string name="location_local">Localização</string>
+    <string name="adicionarLocal">Adicionar Local</string>
+    <string name="name_local">Nome do local</string>
+    <string name="edit_name">Editar Local</string>
+    <string name="create_trip">Criar Viagem</string>
 </resources>

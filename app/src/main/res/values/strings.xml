@@ -7,6 +7,7 @@
     <string name="edit_password">Insert your password here</string>
     <string name="recuperar">I forgot my password</string>
     <string name="proximo1">Next</string>
+    <string name="guardar">Save</string>
     <string name="proximo2">Go to login</string>
     <string name="introSlider1Titulo">Welcome to Roteiros 1</string>
     <string name="introSlider1Descricao">Welcome to Roteiros Descricao 1</string>
@@ -14,6 +15,7 @@
     <string name="introSlider2Descricao">Welcome to Roteiros Descricao 2</string>
     <string name="introSlider3Titulo">Welcome to Roteiros 3</string>
     <string name="introSlider3Descricao">Welcome to Roteiros Descricao 3</string>
+    <string name="editarLocal">Edit Locals</string>
     <string name="profile">Profile</string>
     <string name="nome_user">Name of User</string>
     <string name="num_viagens">Total of trips:</string>
@@ -21,4 +23,22 @@
     <string name="logout">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Confirm Password</string>
+    <string name="trips">Trips</string>
+    <string name="title_viagem">Title of the trip</string>
+    <string name="destination_viagem">Trip destination</string>
+    <string name="description_viagem">Trip description</string>
+    <string name="date_viagem">Travel days</string>
+    <string name="rating">Trip Rating</string>
+    <string name="edit_local">Edit Locations</string>
+    <string name="rating_location">Rating of location</string>
+    <string name="visited_location">Day of the place visited</string>
+    <string name="type_local">Location Type</string>
+    <string name="description_local">Location Description</string>
+    <string name="price_local">Price(s)</string>
+    <string name="location_local">Location</string>
+    <string name="adicionarLocal">Add Local</string>
+    <string name="name_local">Name of the location</string>
+    <string name="edit_name">Edit Location</string>
+    <string name="create_trip">Create Trip</string>
 </resources>

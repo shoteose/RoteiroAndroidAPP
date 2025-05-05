@@ -34,7 +34,7 @@
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/poppins_bold"
             android:paddingTop="40dp"
-            android:text="@string/profile"
+            android:text="@string/edit_profile"
             android:textSize="40sp"
             app:layout_constraintBottom_toTopOf="@+id/user_avatar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +84,8 @@
                 android:shadowDx="2"
                 android:shadowDy="15"
                 android:shadowRadius="15"
-                android:text="EMAIL"
+                android:text="@string/nome_user"
+                android:textAllCaps="true"
                 android:textSize="12sp" />
 
             <EditText

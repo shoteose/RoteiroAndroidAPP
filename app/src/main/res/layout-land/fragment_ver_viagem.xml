@@ -347,10 +347,15 @@
         android:id="@+id/cutted_roteiros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:alpha="0.2"
-        android:src="@drawable/cutted_roteiros"
-        android:translationY="403dp"
+        android:src="@drawable/logocima"
+        android:translationX="0dp"
+        android:translationY="0dp"
         android:translationZ="-1dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="-100dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

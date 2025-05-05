@@ -1,82 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white"
-    android:backgroundTint="@color/white">
+    android:background="#ffffff"
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="224dp"
-        android:layout_height="159dp"
-        android:paddingLeft="85dp"
-        android:paddingTop="80dp"
-        android:src="@drawable/logo_roteiros"
-        tools:ignore="MissingConstraints" />
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bottomNav" />
 
-    <TextView
-        android:id="@+id/roteiros_title"
-        android:layout_width="380dp"
-        android:layout_height="108dp"
-        android:layout_below="@+id/logo"
-        android:layout_centerHorizontal="false"
-        android:fontFamily="@font/poppins_bold"
-        android:paddingLeft="50dp"
-        android:text="Roteiros"
-        android:textColor="#098336"
-        android:textSize="48sp" />
-
-    <TextView
-        android:id="@+id/roteiros_slogan"
-        android:layout_width="282dp"
-        android:layout_height="91dp"
-        android:layout_below="@id/roteiros_title"
-        android:layout_marginTop="-38dp"
-        android:fontFamily="@font/poppins_bold"
-        android:paddingLeft="10dp"
-        android:paddingTop="20dp"
-        android:text="@string/slogan"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textStyle="italic" />
-
-    <Button
-        android:id="@+id/btn_login"
+    <com.google.android.material.navigationrail.NavigationRailView
+        android:id="@+id/bottomNav"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/roteiros_slogan"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="-182dp"
-        android:backgroundTint="#098336"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/login"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
+        android:layout_height="match_parent"
+        app:menuGravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/meu_menu" />
 
-    <Button
-        android:id="@+id/btn_criar"
-        android:layout_width="182dp"
-        android:layout_height="42dp"
-        android:layout_below="@id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:backgroundTint="#E8EDF2"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/signup"
-        android:textColor="#000000"
-        android:textSize="18sp" />
-
-    <ImageView
-        android:id="@+id/aviao_com_rastro"
-        android:layout_width="276dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/aviao_com_rastro"
-        android:translationX="10dp" />
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

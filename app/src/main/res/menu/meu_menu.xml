@@ -3,10 +3,10 @@
 
     <item android:id="@+id/viagem"
         android:icon="@drawable/travel"
-        android:title="Viagens"/>
+        android:title="@string/viagem"/>
 
     <item android:id="@+id/perfil"
         android:icon="@drawable/person"
-        android:title="Perfil"/>
+        android:title="@string/perfil"/>
 
 </menu>

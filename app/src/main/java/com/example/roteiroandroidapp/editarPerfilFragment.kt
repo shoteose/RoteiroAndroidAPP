@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.roteiroandroidapp.databinding.FragmentEditarPerfilBinding
 
@@ -25,10 +26,30 @@ class editarPerfilFragment : Fragment() {
 
 
         binding.guardarPerfil.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container, editarLocationFragment())
-                .addToBackStack(null)
-                .commit()
+
+            if(binding.editEmail?.text.toString().equals("") || binding.editNome?.text.toString().equals("") || binding.editNomeUSER?.text.toString().equals("") || binding.editPassword?.text.toString().equals("") || binding.confirmPass?.text.toString().equals("") ){
+
+                if(binding.editPassword?.text.toString() == binding.confirmPass?.text.toString()){
+
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, editarLocationFragment())
+                        .addToBackStack(null)
+                        .commit()
+
+                }else{
+
+                    Toast.makeText(context, "As palavras-passes são diferentes", Toast.LENGTH_SHORT).show()
+
+                    binding.editPassword?.text?.clear()
+                    binding.confirmPass?.text?.clear()
+
+                }
+
+            }else{
+
+                Toast.makeText(context, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
+
+            }
         }
 
         binding.backbutton.setOnClickListener({

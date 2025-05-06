@@ -16,17 +16,17 @@ class IntroSliderAdapter(private val context: Context) :
         // Estes sao os 3 slides que vao ser usados
     private val slides = listOf(
         IntroSlide(
-            R.drawable.introslider1,
+            R.drawable.mapamundi,
             context.getString(R.string.introSlider1Titulo),
             context.getString(R.string.introSlider1Descricao)
         ),
         IntroSlide(
-            R.drawable.introslider2,
+            R.drawable.calendario,
             context.getString(R.string.introSlider2Titulo),
             context.getString(R.string.introSlider2Descricao)
         ),
         IntroSlide(
-            R.drawable.introslider3,
+            R.drawable.polaroid,
             context.getString(R.string.introSlider3Titulo),
             context.getString(R.string.introSlider3Descricao)
         )

@@ -9,12 +9,11 @@
     <string name="proximo1">Next</string>
     <string name="guardar">Save</string>
     <string name="proximo2">Go to login</string>
-    <string name="introSlider1Titulo">Welcome to Roteiros 1</string>
-    <string name="introSlider1Descricao">Welcome to Roteiros Descricao 1</string>
-    <string name="introSlider2Titulo">Welcome to Roteiros 2</string>
-    <string name="introSlider2Descricao">Welcome to Roteiros Descricao 2</string>
-    <string name="introSlider3Titulo">Welcome to Roteiros 3</string>
-    <string name="introSlider3Descricao">Welcome to Roteiros Descricao 3</string>
+    <string name="introSlider1Titulo">Explore the world at your own pace</string>
+    <string name="introSlider1Descricao">Discover unique destinations and save your favorite itineraries in a single app.</string>
+    <string name="introSlider2Titulo">Organize your trips with ease</string>
+    <string name="introSlider2Descricao">Add places, activities and restaurants to your itineraries quickly and intuitively.</string>
+    <string name="introSlider3Titulo">Record and share your moments</string>
     <string name="editarLocal">Edit Locals</string>
     <string name="profile">Profile</string>
     <string name="nome_user">Name of User</string>
@@ -46,4 +45,5 @@
     <string name="add_trip">Add Trip</string>
     <string name="registro">Register</string>
     <string name="add_username">Insert your username here</string>
+    <string name="introSlider3Descricao">Save memories and turn each trip into a story.</string>
 </resources>

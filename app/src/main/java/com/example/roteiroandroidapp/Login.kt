@@ -2,6 +2,7 @@ package com.example.roteiroandroidapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,8 +25,25 @@ class Login : AppCompatActivity() {
 
         binding.btnLogin.setOnClickListener({
 
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            var email = binding.editEmail.text.toString()
+            var pass = binding.editPassword.text.toString()
+
+            if(email == "paulo@hugo.eduardo"){
+
+                if(pass == "computacaomovel"){
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    binding.editPassword.text.clear()
+                    Toast.makeText(this, "Palavra-passe Incorreta", Toast.LENGTH_SHORT).show()
+                }
+            }else{
+
+                Toast.makeText(this, "Não existe essa conta", Toast.LENGTH_SHORT).show()
+                binding.editEmail.text.clear()
+                binding.editPassword.text.clear()
+
+            }
 
         })
 

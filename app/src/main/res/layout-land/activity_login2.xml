@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,124 +9,149 @@
     android:backgroundTint="@color/white"
     tools:context=".Login">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
     <ImageButton
         android:id="@+id/backbutton"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="none"
+        android:background="@null"
         android:scaleType="centerInside"
-        android:src="@drawable/backbutton" />
+        android:src="@drawable/backbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/backbutton"
-        android:layout_centerHorizontal="false"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
-        android:paddingLeft="45dp"
         android:text="@string/login"
         android:textColor="#000000"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@id/backbutton" />
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login"
-        android:orientation="vertical"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp">
+        android:fontFamily="@font/poppins_medium"
+        android:letterSpacing="0.2"
+        android:shadowColor="#2C2D2D"
+        android:shadowDx="2"
+        android:shadowDy="15"
+        android:shadowRadius="15"
+        android:text="EMAIL"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_email"
+        app:layout_constraintTop_toBottomOf="@id/login" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:letterSpacing="0.2"
-            android:textColor="#000000"
-            android:shadowColor="#2C2D2D"
-            android:shadowDx="2"
-            android:shadowDy="15"
-            android:shadowRadius="15"
-            android:text="EMAIL"
-            android:textSize="18sp" />
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/border_edittext"
+        android:clipToOutline="false"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/edit_email"
+        android:outlineProvider="background"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_label" />
 
-        <EditText
-            android:id="@+id/edit_email"
-            android:layout_width="347dp"
-            android:layout_height="40dp"
-            android:background="@drawable/border_edittext"
-            android:clipToOutline="false"
-            android:elevation="4dp"
-            android:fontFamily="@font/poppins"
-            android:hint="@string/edit_email"
-            android:outlineProvider="background"
-            android:paddingLeft="10dp"
-            android:textSize="12sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:letterSpacing="0.2"
-            android:shadowColor="#2C2D2D"
-            android:textColor="#000000"
-            android:shadowDx="2"
-            android:shadowDy="15"
-            android:shadowRadius="15"
-            android:layout_marginTop="10dp"
-            android:text="PASSWORD"
-            android:textSize="18sp" />
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:letterSpacing="0.2"
+        android:shadowColor="#2C2D2D"
+        android:shadowDx="2"
+        android:shadowDy="15"
+        android:shadowRadius="15"
+        android:text="PASSWORD"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/edit_email"
+        app:layout_constraintTop_toBottomOf="@id/edit_email" />
 
-        <EditText
-            android:id="@+id/edit_password"
-            android:layout_width="347dp"
-            android:layout_height="40dp"
-            android:background="@drawable/border_edittext"
-            android:clipToOutline="false"
-            android:elevation="4dp"
-            android:fontFamily="@font/poppins"
-            android:hint="@string/edit_password"
-            android:outlineProvider="background"
-            android:paddingLeft="10dp"
-            android:textSize="12sp" />
+    <EditText
+        android:id="@+id/edit_password"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@drawable/border_edittext"
+        android:clipToOutline="false"
+        android:elevation="4dp"
+        android:fontFamily="@font/poppins"
+        android:hint="@string/edit_password"
+        android:outlineProvider="background"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_email"
+        app:layout_constraintStart_toStartOf="@+id/edit_email"
+        app:layout_constraintTop_toBottomOf="@id/password_label" />
 
-        <TextView
-            android:id="@+id/recuperar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/poppins"
-            android:text="@string/recuperar"
-            android:textAllCaps="true"
-            android:textSize="10sp"
-            android:textStyle="italic" />
+    <TextView
+        android:id="@+id/recuperar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/recuperar"
+        android:textAllCaps="true"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@id/edit_password" />
 
+    <ImageView
+        android:id="@+id/aviao_com_rastro"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/aviao_com_rastro"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"/>
 
-    </LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8" />
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="265dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/linear"
-        android:layout_centerHorizontal="false"
-        android:layout_marginLeft="80dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#098336"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/login"
         android:textColor="#FFFFFF"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recuperar" />
 
-    <ImageView
-        android:id="@+id/aviao_com_rastro"
-        android:layout_width="276dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/aviao_com_rastro"
-        android:translationX="10dp" />
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

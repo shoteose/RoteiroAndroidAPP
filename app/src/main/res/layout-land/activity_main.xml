@@ -16,11 +16,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bottomNav" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
     <com.google.android.material.navigationrail.NavigationRailView
         android:id="@+id/bottomNav"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menuGravity="center"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

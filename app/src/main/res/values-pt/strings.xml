@@ -43,4 +43,7 @@
     <string name="create_trip">Criar Viagem</string>
     <string name="viagem">Viagens</string>
     <string name="perfil">Perfil</string>
+    <string name="add_trip">Adicionar Viagem</string>
+    <string name="registro">Criar Conta</string>
+    <string name="add_username">Insira o seu username</string>
 </resources>

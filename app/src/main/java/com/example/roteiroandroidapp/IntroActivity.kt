@@ -108,7 +108,7 @@ class IntroActivity : AppCompatActivity() {
 
     // intent pro login
     private fun startLoginActivity() {
-        startActivity(Intent(this, Login::class.java))
+        startActivity(Intent(this, IndexLogin::class.java))
         finish()
     }
 }

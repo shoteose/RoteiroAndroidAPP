@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
+
     android:layout_height="match_parent"
     tools:context=".editarPerfilFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -20,7 +21,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
-            android:background="none"
+            android:background="@null"
             android:scaleType="centerInside"
             android:src="@drawable/backbutton"
             app:layout_constraintTop_toTopOf="parent"
@@ -194,7 +195,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/edit_profile"
+            android:id="@+id/guardarPerfil"
             android:layout_width="220dp"
             android:layout_height="58dp"
             android:layout_centerHorizontal="true"

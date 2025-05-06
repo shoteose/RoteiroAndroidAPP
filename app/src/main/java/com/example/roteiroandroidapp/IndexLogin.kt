@@ -6,32 +6,31 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.roteiroandroidapp.databinding.ActivityLogin2Binding
+import com.example.roteiroandroidapp.databinding.ActivityIndexLoginBinding
 
-class Login : AppCompatActivity() {
+class IndexLogin : AppCompatActivity() {
 
-    private val binding by lazy { ActivityLogin2Binding.inflate(layoutInflater) }
+    private val binding by lazy { ActivityIndexLoginBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        binding.btnLogin.setOnClickListener({
-
-            val intent = Intent(this, MainActivity::class.java)
+        binding.btnLogin.setOnClickListener {
+            val intent = Intent(this, Login::class.java)
             startActivity(intent)
+        }
 
-        })
-
-        binding.backbutton.setOnClickListener({
-            val intent = Intent(this, IndexLogin::class.java)
+        binding.btnCriar.setOnClickListener {
+            val intent = Intent(this, Registro::class.java)
             startActivity(intent)
-        })
+        }
     }
 }

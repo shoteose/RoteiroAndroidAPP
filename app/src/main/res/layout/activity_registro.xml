@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    tools:context=".Login">
+    tools:context=".Registro">
 
     <ImageButton
         android:id="@+id/backbutton"
@@ -28,7 +28,7 @@
         android:layout_marginTop="100dp"
         android:textColor="#000000"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/login"
+        android:text="@string/registro"
         android:textSize="40sp" />
 
     <LinearLayout
@@ -65,6 +65,63 @@
             android:hint="@string/edit_email"
             android:outlineProvider="background"
             android:paddingLeft="10dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:letterSpacing="0.2"
+            android:shadowColor="#2C2D2D"
+            android:textColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="15"
+            android:shadowRadius="15"
+            android:layout_marginTop="10dp"
+            android:text="USERNAME"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
+            android:clipToOutline="false"
+            android:textSize="12sp"
+            android:elevation="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/nome_user"
+            android:outlineProvider="background"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:letterSpacing="0.2"
+            android:shadowColor="#2C2D2D"
+            android:textColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="15"
+            android:shadowRadius="15"
+            android:layout_marginTop="10dp"
+            android:text="@string/nome_user"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edit_nomeUSER"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
+            android:clipToOutline="false"
+            android:textSize="12sp"
+            android:elevation="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/add_username"
+            android:outlineProvider="background"
+            android:paddingLeft="10dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,21 +148,39 @@
             android:hint="@string/edit_password"
             android:outlineProvider="background"
             android:paddingLeft="10dp" />
-        <TextView
-            android:id="@+id/recuperar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/recuperar"
-            android:fontFamily="@font/poppins"
-            android:textStyle="italic"
-            android:textSize="9sp"
-            android:textAllCaps="true"/>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:letterSpacing="0.2"
+            android:shadowColor="#2C2D2D"
+            android:textColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="15"
+            android:shadowRadius="15"
+            android:layout_marginTop="10dp"
+            android:text="@string/confirm"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/confirm_pass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/border_edittext"
+            android:clipToOutline="false"
+            android:textSize="12sp"
+            android:elevation="4dp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/confirm"
+            android:outlineProvider="background"
+            android:paddingLeft="10dp"
+            android:translationZ="1dp"/>
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_criarConta"
         android:layout_below="@id/linear"
         android:layout_width="265dp"
         android:layout_height="wrap_content"
@@ -113,7 +188,7 @@
         android:layout_marginTop="32dp"
         android:backgroundTint="#098336"
         android:fontFamily="@font/poppins_bold"
-        android:text="@string/login"
+        android:text="@string/registro"
         android:textColor="#FFFFFF"
         android:textSize="28sp" />
 
@@ -121,8 +196,10 @@
         android:id="@+id/aviao_com_rastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:alpha="0.2"
         android:src="@drawable/aviao_com_rastro"
         android:translationX="-125dp"
-        android:translationY="450dp" />
+        android:translationY="450dp"
+        android:translationZ="-1dp" />
 
 </RelativeLayout>

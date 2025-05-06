@@ -13,8 +13,13 @@
         android:theme="@style/Theme.RoteiroAndroidApp"
         tools:targetApi="31">
         <activity
+            android:name=".Registro"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
+        <activity android:name=".IndexLogin" />
+
         <activity
             android:name=".IntroActivity"
             android:exported="true">

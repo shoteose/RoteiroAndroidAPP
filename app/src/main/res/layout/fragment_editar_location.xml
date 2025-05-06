@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    tools:context=".editarLocalFragment">
+    tools:context=".editarLocationFragment">
 
     <ImageButton
         android:id="@+id/backbutton"
@@ -15,7 +15,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:background="none"
+        android:background="@null"
         android:scaleType="centerInside"
         android:src="@drawable/backbutton"
         app:layout_constraintStart_toStartOf="parent"
@@ -363,7 +363,7 @@
     </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/edit_profile"
+        android:id="@+id/guardaaar"
         android:layout_width="220dp"
         android:layout_height="58dp"
         android:layout_centerHorizontal="true"

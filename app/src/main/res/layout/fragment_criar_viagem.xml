@@ -98,8 +98,10 @@
                 android:textSize="12sp" />
 
             <EditText
+                android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/border_green_input"
                 android:textSize="20sp" />
 
@@ -141,7 +143,7 @@
         android:layout_width="220dp"
         android:layout_height="58dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/border_green"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/guardar"
@@ -151,7 +153,14 @@
         android:translationZ="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_scroll" />
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
         android:id="@+id/cutted_roteiros"
@@ -159,8 +168,8 @@
         android:layout_height="wrap_content"
         android:alpha="0.2"
         android:src="@drawable/cutted_roteiros"
-        android:translationY="403dp"
         android:translationZ="-1dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -64,7 +64,7 @@
         app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_viagem"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"
         app:layout_constraintBottom_toTopOf="@id/text_days">
 
         <ImageView

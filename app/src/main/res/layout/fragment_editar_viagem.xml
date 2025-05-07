@@ -13,280 +13,316 @@
         android:id="@+id/backbutton"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:background="@null"
         android:scaleType="centerInside"
         android:src="@drawable/backbutton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_viagem"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/poppins_bold"
         android:paddingTop="30dp"
         android:text="冰淇淋"
+        android:textAlignment="center"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
         android:layout_width="250dp"
         android:layout_height="120dp"
-        app:cardCornerRadius="18dp"
         android:layout_marginEnd="12dp"
         android:elevation="4dp"
-        app:layout_constraintTop_toBottomOf="@id/title_viagem"
+        app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_viagem">
 
         <ImageView
+            android:id="@+id/kyoto_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/kyoto" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/camera"
+            android:translationX="200dp"
+            android:translationY="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/kyoto_image" />
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:id="@+id/linear_perfil"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintTop_toBottomOf="@id/cardview">
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_constraintTop_toBottomOf="@id/cardview"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@id/editarlocal"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:letterSpacing="0.2"
-            android:textColor="#000000"
-            android:shadowColor="#2C2D2D"
-            android:shadowDx="2"
-            android:shadowDy="15"
-            android:shadowRadius="15"
-            android:text="@string/title_viagem"
-            android:textAllCaps="true"
-            android:textSize="12sp" />
-
-        <EditText
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/border_green_input"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="209dp" />
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:letterSpacing="0.2"
-            android:textColor="#000000"
-            android:shadowColor="#2C2D2D"
-            android:shadowDx="2"
-            android:shadowDy="15"
-            android:shadowRadius="15"
-            android:text="@string/destination_viagem"
-            android:textAllCaps="true"
-            android:textSize="12sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/border_green_input"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="209dp" />
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
-            android:letterSpacing="0.2"
-            android:textColor="#000000"
-            android:shadowColor="#2C2D2D"
-            android:shadowDx="2"
-            android:shadowDy="15"
-            android:shadowRadius="15"
-            android:text="@string/description_viagem"
-            android:textAllCaps="true"
-            android:textSize="12sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/border_green_input"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="95dp"
-            tools:layout_editor_absoluteY="209dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/data_classificacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintTop_toBottomOf="@id/linear_perfil"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/date_viagem"
-                    android:textSize="12sp"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textStyle="bold"
-                    android:textAllCaps="true"/>
-
-                <ImageView
-                    android:id="@+id/test_calendar"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginStart="6dp"
-                    android:src="@drawable/ic_calendar" />
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:id="@+id/data_range"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="20/07/2025 → 23/07/2025"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/poppins"/>
-/>
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
-            android:background="#000000"/>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/title_label"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/title_viagem"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview" />
+
+            <EditText
+                android:id="@+id/edit_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_green_input"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/title_label"
+                app:layout_constraintStart_toStartOf="@id/title_label"
+                app:layout_constraintTop_toBottomOf="@id/title_label" />
+
+            <TextView
+                android:id="@+id/destination_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/destination_viagem"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/edit_title"
+                app:layout_constraintStart_toStartOf="@id/edit_title"
+                app:layout_constraintTop_toBottomOf="@id/edit_title" />
+
+            <EditText
+                android:id="@+id/destination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_green_input"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/destination_label"
+                app:layout_constraintStart_toStartOf="@id/destination_label"
+                app:layout_constraintTop_toBottomOf="@id/destination_label" />
+
+            <TextView
+                android:id="@+id/description_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:text="@string/description_viagem"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/destination"
+                app:layout_constraintStart_toStartOf="@id/destination"
+                app:layout_constraintTop_toBottomOf="@id/destination" />
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_green_input"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="@id/description_label"
+                app:layout_constraintStart_toStartOf="@id/description_label"
+                app:layout_constraintTop_toBottomOf="@id/description_label" />
+
+            <TextView
+                android:id="@+id/days_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/date_viagem"
+                android:textAllCaps="true"
+                android:letterSpacing="0.2"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                android:textColor="@android:color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/edit_description"
+                app:layout_constraintTop_toBottomOf="@id/edit_description"/>
+
+            <ImageView
+                android:id="@+id/test_calendar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_calendar"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/days_label"/>
+
+            <TextView
+                android:id="@+id/data_range"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins"
+                android:text="20/07/2025 → 23/07/2025"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/days_label"
+                app:layout_constraintStart_toStartOf="@id/days_label"
+                app:layout_constraintEnd_toStartOf="@id/view"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="#000000"
+                android:layout_marginStart="50dp"
+                app:layout_constraintTop_toTopOf="@id/days_label"
+                app:layout_constraintBottom_toBottomOf="@id/data_range"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginStart="15dp"
                 android:text="@string/rating"
                 android:textAllCaps="true"
-                android:textStyle="bold"
-                android:fontFamily="@font/poppins_medium"
                 android:textColor="@android:color/black"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:shadowColor="#2C2D2D"
+                android:shadowDx="2"
+                android:shadowDy="15"
+                android:shadowRadius="15"
+                app:layout_constraintStart_toEndOf="@id/view"
+                app:layout_constraintTop_toTopOf="@id/days_label"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp">
+            <ImageView
+                android:id="@+id/filled"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_star_filled"
+                app:layout_constraintStart_toStartOf="@id/rating"
+                app:layout_constraintTop_toTopOf="@id/data_range"/>
 
-                <!-- 4 estrelas preenchidas -->
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
-                <!-- 1 estrela vazia -->
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/filled2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_star_filled"
+                app:layout_constraintStart_toEndOf="@id/filled"
+                app:layout_constraintTop_toTopOf="@id/data_range"/>
+
+            <ImageView
+                android:id="@+id/filled3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_star_filled"
+                app:layout_constraintStart_toEndOf="@id/filled2"
+                app:layout_constraintTop_toTopOf="@id/data_range"/>
+
+            <ImageView
+                android:id="@+id/filled4"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_star_filled"
+                app:layout_constraintStart_toEndOf="@id/filled3"
+                app:layout_constraintTop_toTopOf="@id/data_range"/>
+
+            <ImageView
+                android:id="@+id/empty"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_star_empty"
+                app:layout_constraintStart_toEndOf="@id/filled4"
+                app:layout_constraintTop_toTopOf="@id/data_range"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/editarlocal"
         android:layout_width="220dp"
-        android:layout_height="58dp"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/border_blue"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/edit_local"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="23sp"
-        android:translationZ="1dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@id/data_classificacao"
+        app:layout_constraintBottom_toTopOf="@id/save"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/save"
         android:layout_width="220dp"
-        android:layout_height="58dp"
-        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/border_green"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/guardar"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="23sp"
-        android:translationZ="1dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintTop_toBottomOf="@id/editarlocal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/horizontal_guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
     <ImageView
         android:id="@+id/cutted_roteiros"
@@ -294,8 +330,8 @@
         android:layout_height="wrap_content"
         android:alpha="0.2"
         android:src="@drawable/cutted_roteiros"
-        android:translationY="403dp"
-        tools:ignore="MissingConstraints"
-        android:translationZ="-1dp"/>
+        android:translationZ="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

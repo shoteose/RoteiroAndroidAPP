@@ -17,7 +17,7 @@
     <string name="editarLocal">Edit Locals</string>
     <string name="profile">Profile</string>
     <string name="nome_user">Name of User</string>
-    <string name="num_viagens">Total of trips:</string>
+    <string name="num_viagens">Total of trips: 2</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="logout">Logout</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -47,4 +47,5 @@
     <string name="add_username">Insert your username here</string>
     <string name="introSlider3Descricao">Save memories and turn each trip into a story.</string>
     <string name="add_name">Insert your name here</string>
+    <string name="share">Share Trip</string>
 </resources>

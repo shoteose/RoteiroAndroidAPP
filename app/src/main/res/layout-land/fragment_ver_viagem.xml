@@ -42,6 +42,13 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.2" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
     <TextView
         android:id="@+id/title_viagem"
         android:layout_width="wrap_content"
@@ -51,9 +58,9 @@
         android:fontFamily="@font/poppins_bold"
         android:text="冰淇淋"
         android:textSize="40sp"
-        app:layout_constraintTop_toTopOf="@id/backbutton"
         app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/backbutton" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -62,10 +69,10 @@
         android:layout_marginEnd="12dp"
         android:elevation="4dp"
         app:cardCornerRadius="18dp"
+        app:layout_constraintBottom_toTopOf="@id/text_days"
         app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"
-        app:layout_constraintBottom_toTopOf="@id/text_days">
+        app:layout_constraintTop_toBottomOf="@id/horizontal_guideline">
 
         <ImageView
             android:layout_width="match_parent"
@@ -79,6 +86,7 @@
         android:id="@+id/text_days"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
         android:fontFamily="@font/poppins_medium"
         android:letterSpacing="0.2"
@@ -91,27 +99,27 @@
         android:textColor="@android:color/black"
         android:textSize="12sp"
         android:textStyle="bold"
-        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@id/cardview"
-        app:layout_constraintTop_toBottomOf="@id/cardview"/>
+        app:layout_constraintTop_toBottomOf="@id/cardview" />
 
     <TextView
         android:id="@+id/data_range"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins"
         android:text="20/07/2025 → 23/07/2025"
         android:textColor="@android:color/black"
         android:textSize="14sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintTop_toBottomOf="@id/text_days"
-        app:layout_constraintStart_toStartOf="@id/cardview"/>
+        app:layout_constraintStart_toStartOf="@id/cardview"
+        app:layout_constraintTop_toBottomOf="@id/text_days" />
     />
 
     <TextView
         android:id="@+id/text_rating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_medium"
         android:letterSpacing="0.2"
         android:shadowColor="#2C2D2D"
@@ -123,9 +131,8 @@
         android:textColor="@android:color/black"
         android:textSize="12sp"
         android:textStyle="bold"
-        android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="@id/cardview"
-        app:layout_constraintTop_toBottomOf="@id/data_range"/>
+        app:layout_constraintTop_toBottomOf="@id/data_range" />
 
 
     <ImageView
@@ -134,7 +141,7 @@
         android:layout_height="22dp"
         android:src="@drawable/ic_star_filled"
         app:layout_constraintStart_toStartOf="@id/cardview"
-        app:layout_constraintTop_toBottomOf="@id/text_rating"/>
+        app:layout_constraintTop_toBottomOf="@id/text_rating" />
 
     <ImageView
         android:id="@+id/filled2"
@@ -142,7 +149,7 @@
         android:layout_height="22dp"
         android:src="@drawable/ic_star_filled"
         app:layout_constraintStart_toEndOf="@id/filled"
-        app:layout_constraintTop_toBottomOf="@id/text_rating"/>
+        app:layout_constraintTop_toBottomOf="@id/text_rating" />
 
     <ImageView
         android:id="@+id/filled3"
@@ -184,8 +191,8 @@
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/empty"
-        app:layout_constraintStart_toStartOf="@id/cardview"/>
+        app:layout_constraintStart_toStartOf="@id/cardview"
+        app:layout_constraintTop_toBottomOf="@id/empty" />
 
     <TextView
         android:id="@+id/destination"
@@ -194,8 +201,8 @@
         android:fontFamily="@font/poppins"
         android:text="Kyoto"
         android:textColor="#708090"
-        app:layout_constraintTop_toBottomOf="@id/text_destination"
-        app:layout_constraintStart_toStartOf="@id/text_destination"/>
+        app:layout_constraintStart_toStartOf="@id/text_destination"
+        app:layout_constraintTop_toBottomOf="@id/text_destination" />
 
     <TextView
         android:id="@+id/text_description"
@@ -212,8 +219,8 @@
         android:textAllCaps="true"
         android:textColor="#000000"
         android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/destination"
-        app:layout_constraintStart_toStartOf="@id/destination"/>
+        app:layout_constraintStart_toStartOf="@id/destination"
+        app:layout_constraintTop_toBottomOf="@id/destination" />
 
     <TextView
         android:id="@+id/description"
@@ -222,8 +229,8 @@
         android:fontFamily="@font/poppins"
         android:text="Cidade incrível para viajar"
         android:textColor="#708090"
-        app:layout_constraintTop_toBottomOf="@id/text_description"
-        app:layout_constraintStart_toStartOf="@id/text_description"/>
+        app:layout_constraintStart_toStartOf="@id/text_description"
+        app:layout_constraintTop_toBottomOf="@id/text_description" />
 
 
     <ImageView
@@ -232,18 +239,18 @@
         android:layout_height="50dp"
         android:layout_marginEnd="30dp"
         android:src="@drawable/restaurant"
+        app:layout_constraintEnd_toStartOf="@id/kobe_image"
         app:layout_constraintStart_toEndOf="@id/vertical_guideline"
-        app:layout_constraintTop_toTopOf="@id/horizontal_guideline"
-        app:layout_constraintEnd_toStartOf="@id/kobe_image"/>
+        app:layout_constraintTop_toTopOf="@id/horizontal_guideline" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/kobe_image"
         android:layout_width="100dp"
         android:layout_height="56dp"
         android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
         android:elevation="4dp"
         app:cardCornerRadius="10dp"
-        android:layout_marginEnd="15dp"
         app:layout_constraintStart_toEndOf="@id/restaurant"
         app:layout_constraintTop_toTopOf="@id/horizontal_guideline">
 
@@ -259,48 +266,48 @@
         android:id="@+id/kobe_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Kobe Beef Steak Mouriya Gion"
-        android:layout_marginStart="15dp"
         android:textSize="15sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/kobe_image"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"
         app:layout_constraintStart_toEndOf="@id/kobe_image"
-        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
+        app:layout_constraintTop_toTopOf="@id/kobe_image" />
 
     <TextView
         android:id="@+id/kobe_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:fontFamily="@font/poppins"
         android:text="7−1 祇園モーリヤビル 1F"
         android:textColor="#708090"
-        android:layout_marginStart="15dp"
-        app:layout_constraintStart_toEndOf="@id/kobe_image"
-        app:layout_constraintBottom_toBottomOf="@id/kobe_image"/>
+        app:layout_constraintBottom_toBottomOf="@id/kobe_image"
+        app:layout_constraintStart_toEndOf="@id/kobe_image" />
 
 
     <ImageView
         android:id="@+id/garden"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/garden"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="@id/jardim_imagem"
-        app:layout_constraintStart_toStartOf="@id/restaurant"/>
+        app:layout_constraintStart_toStartOf="@id/restaurant" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/jardim_imagem"
-        android:layout_marginTop="10dp"
         android:layout_width="100dp"
         android:layout_height="56dp"
-        android:layout_marginEnd="12dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
         android:elevation="4dp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintTop_toBottomOf="@id/kobe_image"
-        app:layout_constraintStart_toEndOf="@id/garden">
+        app:layout_constraintStart_toEndOf="@id/garden"
+        app:layout_constraintTop_toBottomOf="@id/kobe_image">
 
         <ImageView
             android:layout_width="match_parent"
@@ -313,14 +320,14 @@
         android:id="@+id/jardim_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Jardim Nacional Kyoto Gyoto"
-        android:layout_marginStart="15dp"
         android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"
         app:layout_constraintStart_toEndOf="@id/jardim_imagem"
-        app:layout_constraintTop_toTopOf="@id/jardim_imagem"
-        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
+        app:layout_constraintTop_toTopOf="@id/jardim_imagem" />
 
     <TextView
         android:id="@+id/jardim_location"
@@ -329,8 +336,25 @@
         android:fontFamily="@font/poppins"
         android:text="3 Kyotogyoen"
         android:textColor="#708090"
-        app:layout_constraintStart_toStartOf="@id/jardim_description"
-        app:layout_constraintBottom_toBottomOf="@id/jardim_imagem"/>
+        app:layout_constraintBottom_toBottomOf="@id/jardim_imagem"
+        app:layout_constraintStart_toStartOf="@id/jardim_description" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/partilhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/border_blue"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingHorizontal="20dp"
+        android:text="@string/share"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_guideline2"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"
+        app:layout_constraintStart_toStartOf="@id/vertical_guideline" />
 
 
     <ImageView

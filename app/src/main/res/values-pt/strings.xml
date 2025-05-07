@@ -46,4 +46,5 @@
     <string name="add_trip">Adicionar Viagem</string>
     <string name="registro">Criar Conta</string>
     <string name="add_username">Insira o seu username</string>
+    <string name="add_name">Insira o seu nome aqui</string>
 </resources>

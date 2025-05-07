@@ -293,8 +293,9 @@
         android:layout_height="wrap_content"
         android:alpha="0.2"
         android:src="@drawable/cutted_roteiros"
-        android:translationY="403dp"
         android:translationZ="-1dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
     <TextView
         android:id="@+id/title_viagem"
         android:layout_width="wrap_content"
@@ -31,9 +38,9 @@
         android:paddingTop="30dp"
         android:text="冰淇淋"
         android:textSize="40sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -349,8 +356,8 @@
         android:layout_height="wrap_content"
         android:alpha="0.2"
         android:src="@drawable/cutted_roteiros"
-        android:translationY="403dp"
         android:translationZ="-1dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

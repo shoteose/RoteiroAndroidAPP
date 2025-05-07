@@ -24,40 +24,23 @@ class Registro : AppCompatActivity() {
         }
 
         binding.btnCriarConta.setOnClickListener({
-
             if(binding.editEmail.text.toString().equals("") || binding.editNome.text.toString().equals("") || binding.editNomeUSER.text.toString().equals("") || binding.editPassword.text.toString().equals("") || binding.confirmPass.text.toString().equals("") ){
-
                 if(binding.editPassword.text.toString() == binding.confirmPass.text.toString()){
-
                     val intent = Intent(this, Login::class.java)
                     startActivity(intent)
-
                 }else{
-
                     Toast.makeText(this, "As palavras-passes são diferentes", Toast.LENGTH_SHORT).show()
-
                     binding.editPassword.text.clear()
                     binding.confirmPass.text.clear()
-
                 }
-
             }else{
-
                 Toast.makeText(this, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
-
             }
-
-
         })
 
         binding.backbutton.setOnClickListener({
-
             val intent = Intent(this, IndexLogin::class.java)
             startActivity(intent)
-
         })
-
-
-
     }
 }

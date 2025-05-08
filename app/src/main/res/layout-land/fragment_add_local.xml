@@ -24,16 +24,30 @@
     <TextView
         android:id="@+id/title_local"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppins_bold"
-        android:paddingTop="30dp"
         android:text="@string/adicionarLocal"
-        android:textSize="40sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="16dp"
+        android:paddingTop="25dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@id/backbutton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -44,6 +58,7 @@
         app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@id/title_local">
 
         <ImageView
@@ -53,35 +68,10 @@
             android:scaleType="centerCrop"
             android:src="@drawable/fotoblank" />
 
-
-
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:id="@+id/data_classificacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="25dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardview">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
                 <TextView
+                    android:id="@+id/visited_location"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -91,21 +81,16 @@
                     android:shadowDx="2"
                     android:shadowDy="15"
                     android:shadowRadius="15"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/visited_location"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardview" />
 
                 <TextView
                     android:id="@+id/data_range"
@@ -113,35 +98,28 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
-                    android:gravity="center"
                     android:text="--/--/--"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="130dp"
                     android:textColor="@android:color/black"
-                    android:textSize="14sp" />
-                />
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardview"/>
 
                 <ImageView
                     android:id="@+id/test_calendar"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginStart="6dp"
-                    android:src="@drawable/ic_calendar" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
-            android:background="#000000" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardview"
+                    app:layout_constraintEnd_toEndOf="@id/cardview"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/location"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:letterSpacing="0.2"
@@ -151,64 +129,86 @@
                 android:shadowRadius="15"
                 android:text="@string/rating_location"
                 android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:textColor="@android:color/black"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/estrela1"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_star_empty"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
+    <ImageView
+        android:id="@+id/estrela2"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_star_empty"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
+    <ImageView
+        android:id="@+id/estrela3"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_star_empty"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
+    <ImageView
+        android:id="@+id/estrela4"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_star_empty"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
-
-                <ImageView
-                    android:layout_width="22dp"
-                    android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
+    <ImageView
+        android:id="@+id/estrela5"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/ic_star_empty"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location"/>
 
     <ScrollView
-        android:id="@+id/edit_scroll"
+        android:id="@+id/scroll_section"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="150dp"
         android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/data_classificacao"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="@id/title_local"
+        app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linear_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -224,7 +224,6 @@
                 android:textAllCaps="true"
                 android:textColor="#000000"
                 android:textSize="12sp" />
-
 
             <EditText
                 android:layout_width="match_parent"
@@ -254,7 +253,6 @@
                 android:textColor="#000000"
                 android:textSize="12sp" />
 
-
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -268,7 +266,6 @@
                 android:hint="@string/name_local"
                 tools:layout_editor_absoluteX="95dp"
                 tools:layout_editor_absoluteY="209dp" />
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -347,7 +344,6 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
                 android:layout_marginEnd="15dp"
-
                 android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
@@ -356,14 +352,12 @@
                 tools:layout_editor_absoluteX="95dp"
                 tools:layout_editor_absoluteY="209dp" />
 
-        </LinearLayout>
-    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/edit_profile"
         android:layout_width="220dp"
         android:layout_height="58dp"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/border_green"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/guardar"
@@ -371,10 +365,10 @@
         android:textColor="@color/white"
         android:textSize="23sp"
         android:translationZ="1dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/edit_scroll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+    </ScrollView>
 
     <ImageView
         android:id="@+id/cutted_roteiros"

@@ -237,12 +237,15 @@
 
         <EditText
             android:id="@+id/edit_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_green_input"
             android:fontFamily="@font/poppins"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="10dp"
+            android:text="Restaurante"
             android:textSize="16sp"
-            android:text="Restaurante"/>
+            />
 
         <TextView
             android:id="@+id/local_nome"
@@ -262,11 +265,12 @@
 
         <EditText
             android:id="@+id/descricao_nome"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_green_input"
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/poppins"
+            android:paddingStart="10dp"
             android:textSize="16sp"
             android:text="Kobe Beef Steak Mouriya Gion"/>
 
@@ -289,11 +293,13 @@
 
         <EditText
             android:id="@+id/descricao_descricao"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_green_input"
             android:fontFamily="@font/poppins"
             android:textSize="16sp"
+            android:layout_marginEnd="15dp"
+            android:paddingStart="10dp"
             android:text="Ótimo restaurante para comer carne. \nLocal muito bem higienizado e staff muito simpático.\nFalavam inglês, o que foi uma ajuda a nível de comunicação."
             />
 
@@ -315,11 +321,13 @@
 
         <EditText
             android:id="@+id/preco_descricao"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_green_input"
             android:fontFamily="@font/poppins"
             android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:layout_marginEnd="15dp"
             android:text="Rodízio de carnes - 4047,15 ¥\nMartini com cerveja - 647,67 ¥\nMousse de camarão - 971,50 ¥"
             tools:layout_editor_absoluteX="95dp"
             tools:layout_editor_absoluteY="209dp"/>
@@ -346,6 +354,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border_green_input"
             android:layout_marginEnd="15dp"
+            android:paddingStart="10dp"
             android:fontFamily="@font/poppins"
             android:textSize="16sp"
             android:text="Japão, 〒605-0802 Kyoto, Higashiyama Ward, Yamatocho, 7−1 祇園モーリヤビル 1F"

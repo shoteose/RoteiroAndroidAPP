@@ -76,8 +76,9 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_scroll"
+        app:layout_constraintBottom_toTopOf="@id/save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardview">
@@ -154,6 +155,7 @@
         android:fontFamily="@font/poppins_bold"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/guardar"
         android:textAllCaps="false"
         android:textColor="@color/white"

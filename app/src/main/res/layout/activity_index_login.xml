@@ -46,6 +46,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:layout_marginHorizontal="20dp"
         android:layout_below="@id/roteiros_title"
         android:text="@string/slogan"
         android:fontFamily="@font/poppins_bold"

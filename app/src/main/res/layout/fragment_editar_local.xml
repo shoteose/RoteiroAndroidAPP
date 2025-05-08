@@ -28,11 +28,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
         android:fontFamily="@font/poppins_bold"
-        android:paddingTop="30dp"
         android:text="@string/editarLocal"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backbutton"
         tools:ignore="MissingConstraints" />
 
     <androidx.cardview.widget.CardView

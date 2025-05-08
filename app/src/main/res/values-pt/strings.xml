@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RoteiroAndroidApp</string>
+    <string name="app_name">Roteiros</string>
     <string name="login">Iniciar Sessão</string>
     <string name="slogan">Mais que uma app, um passaporte digital</string>
     <string name="signup">Criar Conta</string>

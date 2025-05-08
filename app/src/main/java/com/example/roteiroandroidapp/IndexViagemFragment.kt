@@ -23,6 +23,13 @@ class IndexViagemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.imagekyoto.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, verViagemFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
         binding.editKyoto.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container, editarLocalFragment())

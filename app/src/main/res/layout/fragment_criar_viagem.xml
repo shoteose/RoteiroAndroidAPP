@@ -9,6 +9,13 @@
     android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_scroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
     <ImageButton
         android:id="@+id/backbutton"
         android:layout_width="35dp"
@@ -67,11 +74,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="150dp"
         android:fillViewport="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_scroll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardview">
@@ -102,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
                 android:background="@drawable/border_green_input"
                 android:textSize="20sp" />
 
@@ -125,10 +132,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
                 android:background="@drawable/border_green_input"
                 android:textSize="20sp" />
 
-            <CalendarView
+            <android.widget.CalendarView
                 android:id="@+id/calendar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,19 +148,20 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/save"
-        android:layout_width="220dp"
+        android:layout_width="wrap_content"
         android:layout_height="58dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
         android:background="@drawable/border_green"
         android:fontFamily="@font/poppins_bold"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:text="@string/guardar"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="23sp"
         android:translationZ="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_scroll"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/horizontal_guideline" />
 
     <androidx.constraintlayout.widget.Guideline

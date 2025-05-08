@@ -24,16 +24,29 @@
     <TextView
         android:id="@+id/title_local"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
         android:fontFamily="@font/poppins_bold"
-        android:paddingTop="30dp"
         android:text="@string/edit_name"
-        android:textSize="40sp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="10dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="@id/backbutton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
@@ -44,6 +57,7 @@
         app:cardCornerRadius="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
         app:layout_constraintTop_toBottomOf="@id/title_local">
 
         <ImageView
@@ -51,7 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/kobe" />
+            android:src="@drawable/kobe"
+            />
 
         <ImageView
             android:layout_width="50dp"
@@ -66,31 +81,8 @@
 
     </androidx.cardview.widget.CardView>
 
-    <LinearLayout
-        android:id="@+id/data_classificacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="25dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardview">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
                 <TextView
+                    android:id="@+id/visited_location"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -100,56 +92,43 @@
                     android:shadowDx="2"
                     android:shadowDy="15"
                     android:shadowRadius="15"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="10dp"
                     android:text="@string/visited_location"
                     android:textAllCaps="true"
                     android:textColor="@android:color/black"
                     android:textSize="12sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardview"/>
 
                 <TextView
                     android:id="@+id/data_range"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins"
                     android:text="21/07/2025"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="125dp"
                     android:textColor="@android:color/black"
-                    android:textSize="14sp" />
-                />
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardview"/>
 
                 <ImageView
                     android:id="@+id/test_calendar"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginStart="6dp"
-                    android:src="@drawable/ic_calendar" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="10dp"
-            android:background="#000000" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                    android:src="@drawable/ic_calendar"
+                    android:layout_marginTop="100dp"
+                    app:layout_constraintTop_toBottomOf="@id/cardview"
+                    app:layout_constraintEnd_toEndOf="@id/cardview"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/location"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_medium"
                 android:letterSpacing="0.2"
@@ -159,67 +138,73 @@
                 android:shadowRadius="15"
                 android:text="@string/rating_location"
                 android:textAllCaps="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:textColor="@android:color/black"
                 android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview"/>
 
                 <ImageView
+                    android:id="@+id/estrela1"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
+                    android:src="@drawable/ic_star_filled"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"/>
 
                 <ImageView
+                    android:id="@+id/estrela2"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
+                    android:src="@drawable/ic_star_filled"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"/>
 
                 <ImageView
+                    android:id="@+id/estrela3"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
+                    android:src="@drawable/ic_star_filled"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"/>
 
                 <ImageView
+                    android:id="@+id/estrela4"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/ic_star_filled" />
+                    android:src="@drawable/ic_star_filled"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"/>
 
                 <ImageView
+                    android:id="@+id/estrela5"
                     android:layout_width="22dp"
                     android:layout_height="22dp"
-                    android:src="@drawable/ic_star_empty" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-
-    <ScrollView
-        android:id="@+id/edit_scroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="150dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/data_classificacao"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <LinearLayout
-            android:id="@+id/linear_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                    android:src="@drawable/ic_star_empty"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toEndOf="@id/vertical_guideline"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/location"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/text_title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_medium"
@@ -231,25 +216,27 @@
                 android:text="@string/type_local"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="12sp" />
-
+                android:textSize="12sp"
+                android:layout_marginStart="25dp"
+                app:layout_constraintTop_toTopOf="@id/title_local"
+                app:layout_constraintStart_toEndOf="@id/vertical_guideline"/>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/edit_title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
-                android:layout_marginEnd="15dp"
-                android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
                 android:text="Restaurante"
-                tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="209dp" />
+                app:layout_constraintTop_toBottomOf="@id/text_title"
+                app:layout_constraintStart_toStartOf="@id/text_title" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/local_nome"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/poppins_medium"
                 android:letterSpacing="0.2"
                 android:shadowColor="#2C2D2D"
@@ -259,25 +246,26 @@
                 android:text="@string/name_local"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="12sp" />
-
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/edit_title"
+                app:layout_constraintTop_toBottomOf="@id/edit_title" />
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/descricao_nome"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
                 android:layout_marginEnd="15dp"
-
-                android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
                 android:text="Kobe Beef Steak Mouriya Gion"
-                tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="209dp" />
+                app:layout_constraintStart_toStartOf="@id/local_nome"
+                app:layout_constraintTop_toBottomOf="@id/local_nome" />
 
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/descricao_local"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_medium"
@@ -289,23 +277,25 @@
                 android:text="@string/description_local"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/descricao_nome"
+                app:layout_constraintTop_toBottomOf="@id/descricao_nome"/>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/descricao_descricao"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
-                android:layout_marginEnd="15dp"
-                android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
                 android:text="Ótimo restaurante para comer carne. \nLocal muito bem higienizado e staff muito simpático.\nFalavam inglês, o que foi uma ajuda a nível de comunicação."
-                tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="209dp" />
-
+                app:layout_constraintStart_toStartOf="@id/descricao_local"
+                app:layout_constraintTop_toBottomOf="@id/descricao_local"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/preco"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_medium"
@@ -317,22 +307,28 @@
                 android:text="@string/price_local"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/descricao_descricao"
+                app:layout_constraintTop_toBottomOf="@id/descricao_descricao"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/preco_descricao"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
-                android:layout_marginEnd="15dp"
-                android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
                 android:text="Rodízio de carnes - 4047,15 ¥\nMartini com cerveja - 647,67 ¥\nMousse de camarão - 971,50 ¥"
                 tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="209dp" />
+                tools:layout_editor_absoluteY="209dp"
+                app:layout_constraintStart_toStartOf="@id/preco"
+                app:layout_constraintTop_toBottomOf="@id/preco"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/localizacao"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_medium"
@@ -344,23 +340,25 @@
                 android:text="@string/location_local"
                 android:textAllCaps="true"
                 android:textColor="#000000"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/preco_descricao"
+                app:layout_constraintTop_toBottomOf="@id/preco_descricao"/>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/localizacao_descricao"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_green_input"
                 android:layout_marginEnd="15dp"
-
-                android:paddingStart="10dp"
                 android:fontFamily="@font/poppins"
                 android:textSize="16sp"
                 android:text="Japão, 〒605-0802 Kyoto, Higashiyama Ward, Yamatocho, 7−1 祇園モーリヤビル 1F"
                 tools:layout_editor_absoluteX="95dp"
-                tools:layout_editor_absoluteY="209dp" />
+                tools:layout_editor_absoluteY="209dp"
+                app:layout_constraintStart_toStartOf="@id/localizacao"
+                app:layout_constraintTop_toBottomOf="@id/localizacao"
+                app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
 
-        </LinearLayout>
-    </ScrollView>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/edit_profile"
@@ -375,9 +373,9 @@
         android:textSize="23sp"
         android:translationZ="1dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@id/edit_scroll"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/localizacao_descricao"
+        app:layout_constraintTop_toBottomOf="@id/localizacao_descricao"
+        app:layout_constraintEnd_toEndOf="@id/vertical_guideline2"/>
 
 
     <ImageView

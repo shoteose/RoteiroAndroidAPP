@@ -16,7 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        loadFragment(IndexViagemFragment())
+        if(savedInstanceState == null){
+            loadFragment(IndexViagemFragment())
+        }
+
+
         bottomNav = findViewById(R.id.bottomNav)
 
         when (bottomNav) {

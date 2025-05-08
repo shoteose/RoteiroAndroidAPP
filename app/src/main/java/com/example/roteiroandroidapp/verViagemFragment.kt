@@ -23,6 +23,13 @@ class verViagemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.kobeImage.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.container, verLocalFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
         binding.backbutton.setOnClickListener {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.container, IndexViagemFragment())

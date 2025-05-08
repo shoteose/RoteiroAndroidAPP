@@ -30,7 +30,7 @@
         android:text="@string/editarLocal"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@id/vertical_guideline"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/backbutton"
         app:layout_constraintTop_toTopOf="@id/backbutton" />
 
     <androidx.constraintlayout.widget.Guideline

@@ -29,10 +29,14 @@ class editarPerfilFragment : Fragment() {
 
             if(binding.editEmail?.text.toString().equals("") || binding.editNome?.text.toString().equals("") || binding.editNomeUSER?.text.toString().equals("") || binding.editPassword?.text.toString().equals("") || binding.confirmPass?.text.toString().equals("") ){
 
+                Toast.makeText(context, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
+
+            }else{
+
                 if(binding.editPassword?.text.toString() == binding.confirmPass?.text.toString()){
 
                     requireActivity().supportFragmentManager.beginTransaction()
-                        .replace(R.id.container, editarLocationFragment())
+                        .replace(R.id.container, IndexPerfilFragment())
                         .addToBackStack(null)
                         .commit()
 
@@ -44,10 +48,6 @@ class editarPerfilFragment : Fragment() {
                     binding.confirmPass?.text?.clear()
 
                 }
-
-            }else{
-
-                Toast.makeText(context, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
 
             }
         }

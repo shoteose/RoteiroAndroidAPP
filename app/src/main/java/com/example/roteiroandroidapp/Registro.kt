@@ -24,8 +24,15 @@ class Registro : AppCompatActivity() {
         }
 
         binding.btnCriarConta.setOnClickListener({
-            if(binding.editEmail.text.toString().equals("") || binding.editNome.text.toString().equals("") || binding.editNomeUSER.text.toString().equals("") || binding.editPassword.text.toString().equals("") || binding.confirmPass.text.toString().equals("") ){
+            if(binding.editEmail.text.toString() == "" || binding.editNome.text.toString() == "" || binding.editNomeUSER.text.toString() == "" || binding.editPassword.text.toString() == "" || binding.confirmPass.text.toString() == ""){
+
+                Toast.makeText(this, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
+
+            }else{
+
                 if(binding.editPassword.text.toString() == binding.confirmPass.text.toString()){
+                    Toast.makeText(this, "Conta Criado com Sucesso", Toast.LENGTH_SHORT).show()
+
                     val intent = Intent(this, Login::class.java)
                     startActivity(intent)
                 }else{
@@ -33,8 +40,6 @@ class Registro : AppCompatActivity() {
                     binding.editPassword.text.clear()
                     binding.confirmPass.text.clear()
                 }
-            }else{
-                Toast.makeText(this, "Os campos não podem estar vazios", Toast.LENGTH_SHORT).show()
             }
         })
 
